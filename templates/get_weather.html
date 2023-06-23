@@ -35,18 +35,20 @@
         </ul>
     </div>
 </nav>
-
+<style>
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+</style>
 <div class="container">
-    <h1>Weather Page</h1>
-    <p>Here you can see the weather forecast for your location.</p>
-    <!-- Weather form -->
-    <form method="post" action="{{ url_for('get_weather') }}">
-        <div class="form-group">
-            <label for="locationInput">Location</label>
-            <input type="text" class="form-control" id="locationInput" name="city" placeholder="Enter your location">
-        </div>
-        <button type="submit" class="btn btn-primary">Get Weather</button>
-    </form>
+     <h3>Weather in {{ city }}</h3>
+     <p>Weather: {{ weather }}</p>
+     <p>Temperature: {{ temperature }} °C</p>
+     <p>Wind Speed: {{ wind_speed }} m/s</p>
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
