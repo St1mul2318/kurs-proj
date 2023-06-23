@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Weather Page</title>
+    <title>Погода</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           crossorigin="anonymous">
 </head>
@@ -15,37 +15,31 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/">Домашняя страница</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/weather">Weather</a>
+                <a class="nav-link" href="/weather">Погода</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/info">Info</a>
+                <a class="nav-link" href="/info">Информация о нас</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/contacts">Contacts</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/auth">Authorization</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/register">Registration</a>
+                <a class="nav-link" href="/map">Карта погоды</a>
             </li>
         </ul>
     </div>
 </nav>
 
 <div class="container">
-    <h1>Weather Page</h1>
-    <p>Here you can see the weather forecast for your location.</p>
+    <h1>Погода</h1>
+    <p>Введите название города, о окотором хотите узнать информацию о погоде</p>
     <!-- Weather form -->
     <form method="post" action="{{ url_for('get_weather') }}">
         <div class="form-group">
-            <label for="locationInput">Location</label>
-            <input type="text" class="form-control" id="locationInput" name="city" placeholder="Enter your location">
+            <label for="locationInput">Город</label>
+            <input type="text" class="form-control" id="locationInput" name="city" placeholder="Введите название города">
         </div>
-        <button type="submit" class="btn btn-primary">Get Weather</button>
+        <button type="submit" class="btn btn-primary">Получить информацию о погоде</button>
     </form>
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

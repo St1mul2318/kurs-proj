@@ -34,5 +34,11 @@ def info():
     return render_template('info.html')
 
 
+@app.route('/map')
+def map():
+    url = f'https://openweathermap.org/weathermap?basemap=map&cities=true&layer=temperature&lat=64.5340&lon=40.5631&zoom=5'
+    return render_template('map.html', url=url)
+
+
 if __name__ == '__main__':
     app.run(debug=True)

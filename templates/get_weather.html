@@ -15,22 +15,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/">Домашняя страница</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/weather">Weather</a>
+                <a class="nav-link" href="/weather">Погода</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/info">Info</a>
+                <a class="nav-link" href="/info">Информация о нас</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/contacts">Contacts</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/auth">Authorization</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/register">Registration</a>
+                <a class="nav-link" href="/map">Карта погоды</a>
             </li>
         </ul>
     </div>
@@ -45,10 +39,10 @@
 }
 </style>
 <div class="container">
-     <h3>Weather in {{ city }}</h3>
-     <p>Weather: {{ weather }}</p>
-     <p>Temperature: {{ temperature }} °C</p>
-     <p>Wind Speed: {{ wind_speed }} m/s</p>
+     <h3>Погода в городе {{ city }}</h3>
+     <p>Погода: {{ weather }}</p>
+     <p>Температура: {{ temperature }} °C</p>
+     <p>Скорость ветра: {{ wind_speed }} m/s</p>
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
